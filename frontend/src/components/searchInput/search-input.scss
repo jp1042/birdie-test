@@ -1,0 +1,33 @@
+.input-wrapper {
+  width: 100%;
+  display: block;
+}
+
+.id-input {
+  height: 2.5rem;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid gainsboro;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 22rem;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  position: relative;
+  margin-bottom: -3rem;
+  bottom: 3.25rem;
+  left: 19.9rem;
+  width: fit-content;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  transition: 0.25s ease;
+  box-sizing: border-box;
+
+  &:hover {
+    background: rgb(194, 238, 247);
+  }
+}

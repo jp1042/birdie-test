@@ -1,0 +1,72 @@
+.event-date-list {
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 0 11px rgba(0, 38, 77, 0.25);
+  list-style: none;
+  width: fit-content;
+  background: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 10rem;
+  left: 4rem;
+  max-height: 30rem;
+  margin: 0;
+  overflow: scroll;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  ol {
+    list-style: none;
+  }
+
+  .event-date-list-item {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .group-year-month {
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .date-title {
+    margin-bottom: 1rem;
+  }
+}
+
+.date-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 10rem;
+  flex-wrap: wrap;
+
+  .dates {
+    border: 1px solid whitesmoke;
+    width: 3rem;
+    text-align: center;
+    padding: 0.1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.25rem;
+    background: rgb(249, 190, 138);
+    color: white;
+    font-weight: bold;
+    transition: 0.25s ease;
+
+    &:hover {
+      background: rgb(255, 155, 155);
+    }
+  }
+}
