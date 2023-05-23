@@ -1,0 +1,50 @@
+.search {
+  position: relative;
+  top: 10rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0rem;
+  height: 9rem;
+  color: #00264d;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 0 11px rgba(0, 38, 77, 0.25);
+  box-sizing: border-box;
+  transition: 1s ease;
+
+  .search-text {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+  }
+
+  .selected-day {
+    display: inline-block;
+    position: absolute;
+    top: -3rem;
+    font-size: 1.5rem;
+    color: white;
+    right: 10rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .error {
+    color: red;
+    padding: 0.5rem;
+    font-size: 0.75rem;
+    margin-bottom: -0.5rem;
+  }
+
+  .loader {
+    position: absolute;
+    top: 0.25rem;
+    margin: auto;
+    left: -1rem;
+    right: 0;
+  }
+}

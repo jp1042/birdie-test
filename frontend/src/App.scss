@@ -1,0 +1,28 @@
+.app {
+  height: 100%;
+
+  nav {
+    background: #00264d;
+    height: 2rem;
+    display: flex;
+    padding: 1rem;
+  }
+
+  .logo {
+    margin-left: 3rem;
+  }
+
+  .heart {
+    position: fixed;
+    width: 60rem;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 8rem;
+    z-index: -1;
+  }
+}
+
+body {
+  background: #e7fdfe;
+}

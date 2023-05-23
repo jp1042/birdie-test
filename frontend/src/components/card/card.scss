@@ -1,0 +1,34 @@
+.card {
+  width: 100%;
+
+  .timestamp {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+  }
+
+  .event {
+    position: absolute;
+    left: 3.5rem;
+    top: 0.25rem;
+    width: 17.5rem;
+    padding: 0 0.25rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+  }
+
+  .color-code {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    display: block;
+    height: 1.25rem;
+    width: 1.25rem;
+    border-radius: 1rem;
+  }
+
+  .note {
+    margin-top: 0.5rem;
+    border-top: 1px solid rgb(228, 228, 228);
+    padding: 0.25rem;
+  }
+}
