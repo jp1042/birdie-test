@@ -11,7 +11,9 @@ const SearchInput = ({ inputRef, handleSearch, dataLoaded }) => {
         ref={inputRef}
         className="id-input"
         placeholder="Search care recipient id"
-        value={"df50cac5-293c-490d-a06c-ee26796f850d"}
+        onKeyPress={(e) => {
+          if (e.key === "Enter") handleSearch();
+        }}
       ></input>
       <button className="search-button" onClick={handleSearch}>
         <FaSearch size={20} />

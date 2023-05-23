@@ -31,6 +31,8 @@ export function groupDates(dates: string[]) {
 
 export async function queryDB(endpoint, id, timestamp = "") {
   let error = validateSearch(id);
+  if (error) return [undefined, error];
+
   const recipientRes = await fetch(
     `/${endpoint}/${id}${timestamp ? "/" + timestamp : ""}`
   );
