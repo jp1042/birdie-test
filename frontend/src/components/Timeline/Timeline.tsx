@@ -1,17 +1,17 @@
 import { Chrono } from "react-chrono";
-import { Card } from "../card/card";
-
-import "./care-recipient.scss";
 import { CareDataContext } from "../../CareRecipientDataContextProvider";
+import { Card } from "../Card/Card";
 import { useContext } from "react";
 
-const CareRecipient = () => {
+import "./care-recipient.scss";
+
+const Timeline = () => {
   const { careData } = useContext(CareDataContext);
   const loadedData = !!careData?.careRecipeintData.length;
   const content = careData?.careRecipeintData?.map((entry) => (
     <Card entry={entry} />
   ));
-  const Timeline = () => (
+  const TimelineContent = () => (
     <Chrono
       theme={{ primary: "#00264d", secondary: "white" }}
       mode="VERTICAL_ALTERNATING"
@@ -26,12 +26,11 @@ const CareRecipient = () => {
     <section className="care-recipient">
       {loadedData && (
         <div className="timeline-wrapper">
-          <Timeline />
+          <TimelineContent />
         </div>
       )}
-      {!content && <div className="no-records">No record available</div>}
     </section>
   );
 };
 
-export { CareRecipient };
+export { Timeline };

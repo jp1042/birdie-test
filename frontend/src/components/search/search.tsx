@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { useContext } from "react";
 import { groupDates, queryDB } from "../../utils";
 import { CareDataContext } from "../../CareRecipientDataContextProvider";
-import { SearchInput } from "../searchInput/searchInput";
+import { SearchInput } from "../SearchInput/SearchInput";
 import { BarLoader } from "react-spinners";
 import dayjs from "dayjs";
 

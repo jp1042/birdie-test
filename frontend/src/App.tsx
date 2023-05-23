@@ -1,7 +1,7 @@
-import { Search } from "./components/search/search";
+import { Search } from "./components/Search/Search";
 import { CareDataContextProvider } from "./CareRecipientDataContextProvider";
-import { CareRecipient } from "./components/careRecipient/careRecipient";
-import { DatePicker } from "./components/datePicker/datePicker";
+import { Timeline } from "./components/Timeline/Timeline";
+import { DatePicker } from "./components/DatePicker/DatePicker";
 
 import "./App.scss";
 
@@ -13,7 +13,7 @@ function App() {
       </nav>
       <CareDataContextProvider>
         <Search />
-        <CareRecipient />
+        <Timeline />
         <DatePicker />
       </CareDataContextProvider>
       <img className="heart" src="./heart.svg" alt="heart icon" />

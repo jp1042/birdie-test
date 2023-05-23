@@ -1,4 +1,4 @@
-import * as express from "express";
+import express from "express";
 import * as mysql from "mysql";
 import { validate as uuidValidate } from "uuid";
 import * as dotenv from "dotenv";
@@ -22,7 +22,8 @@ careRecipientsController.get("/care-recipient/:id", (req, res) => {
   const { id } = req.params;
 
   if (!uuidValidate(id)) {
-    res.status(400).json({ test: "no" });
+    res.status(400).json({ error: "invalid id" });
+    return;
   }
 
   con.query(
@@ -53,6 +54,7 @@ careRecipientsController.get("/events/:id/:timestamp", (req, res) => {
 
   if (!uuidValidate(id)) {
     res.status(400).json({ test: "no" });
+    return;
   }
 
   con.query(
@@ -83,6 +85,7 @@ careRecipientsController.get("/event-times/:id", (req, res) => {
 
   if (!uuidValidate(id)) {
     res.status(400).json({ test: "no" });
+    return;
   }
 
   con.query(
