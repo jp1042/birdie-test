@@ -45,9 +45,8 @@ describe("Search Validation", () => {
     //@ts-ignore
     global.fetch = mockFetch;
     const id = "invalid-id";
-    const [data, error] = await queryDB(endpoint, id);
-    expect(mockFetch).toHaveBeenCalledWith(`/${endpoint}/${id}`);
-    expect(data).toEqual(mockData);
+    const [_data, error] = await queryDB(endpoint, id);
+    expect(mockFetch).not.toBeCalled();
     expect(error).toBe("Invalid ID: Please enter a valid ID");
   });
 });
