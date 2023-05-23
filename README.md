@@ -6,6 +6,12 @@
 
 ## Usage
 
+To Search for a care recipient in the app please use:
+
+id= `df50cac5-293c-490d-a06c-ee26796f850d`
+
+This in reality would be replaced with a user log in
+
 1. Start the API. (Run the following commands within the `backend` folder)
 
    a. Install the dependencies

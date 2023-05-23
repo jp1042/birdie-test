@@ -36,8 +36,8 @@ careRecipientsController.get("/care-recipient/:id", (req, res) => {
         caregiversTable.first_name as caregiverFirstName, 
         caregiversTable.last_name as caregiverLastName
     FROM events AS eventTable
-    JOIN test_care_recipients AS recipientTable ON eventTable.care_recipient_id = recipientTable.id
-    JOIN test_caregivers AS caregiversTable ON eventTable.caregiver_id = caregiversTable.id
+    LEFT JOIN test_care_recipients AS recipientTable ON eventTable.care_recipient_id = recipientTable.id
+    LEFT JOIN test_caregivers AS caregiversTable ON eventTable.caregiver_id = caregiversTable.id
     WHERE eventTable.care_recipient_id = ?
     AND DATE(eventTable.timestamp) = (SELECT DATE(MAX(events.timestamp)) FROM events WHERE care_recipient_id = ?)
     ORDER BY eventTable.timestamp DESC;`,
@@ -67,8 +67,8 @@ careRecipientsController.get("/events/:id/:timestamp", (req, res) => {
       caregiversTable.first_name as caregiverFirstName, 
       caregiversTable.last_name as caregiverLastName
       FROM events AS eventTable
-      JOIN test_care_recipients AS recipientTable ON eventTable.care_recipient_id = recipientTable.id
-      JOIN test_caregivers AS caregiversTable ON eventTable.caregiver_id = caregiversTable.id
+      LEFT JOIN test_care_recipients AS recipientTable ON eventTable.care_recipient_id = recipientTable.id
+      LEFT JOIN test_caregivers AS caregiversTable ON eventTable.caregiver_id = caregiversTable.id
       WHERE eventTable.care_recipient_id = ?
       AND DATE(eventTable.timestamp) = DATE(?) 
       ORDER BY eventTable.timestamp desc`,

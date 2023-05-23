@@ -31,11 +31,13 @@ const Search = () => {
     const id = inputRef.current?.value;
     const [data, error] = await queryDB("care-recipient", id);
     if (error) setError(error);
-    if (data)
+    if (data) {
       setCareData((prev) => {
         prev.careRecipeintData = data;
         return { ...prev };
       });
+      setError(error);
+    }
     await getEventDates(id);
     setLoading(false);
   };
