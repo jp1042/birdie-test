@@ -20,8 +20,12 @@ export function groupDates(dates: string[]) {
       r[key] = r[key] || { month, year, dates: [] };
       r[key].dates.push(day);
       return r;
-    }, {})
-  );
+    }, [])
+  ) as {
+    year: string;
+    month: string;
+    dates: string[];
+  }[];
   return group;
 }
 

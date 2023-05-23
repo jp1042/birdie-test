@@ -47,7 +47,6 @@ const Search = () => {
       const mappedDates = dates.map((d) => d.date_only);
       const groupedDates = groupDates(mappedDates);
       setCareData((prev) => {
-        //@ts-ignore
         prev.eventDates = groupedDates;
         return { ...prev };
       });

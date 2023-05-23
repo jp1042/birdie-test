@@ -1,6 +1,6 @@
 # Birdie Developer Test - Johnny Parker
 
-## Prerequisits
+## Prerequisites
 
 - Copy the env-example variables into a .env file and add the corresponding values
 
